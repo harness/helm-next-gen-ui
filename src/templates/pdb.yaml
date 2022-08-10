@@ -1,0 +1,9 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: next-gen-ui
+spec:
+  minAvailable: "50%"
+  selector:
+   matchLabels:
+    app: next-gen-ui
