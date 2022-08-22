@@ -29,14 +29,14 @@ spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
-      {{- end }}  
+      {{- end }}
       serviceAccountName: {{ include "next-gen-ui.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       terminationGracePeriodSeconds: 30
       containers:
       - name: next-gen-ui
-        image: {{ include "harnesscommon.names.imagename" . }}
+        image: {{ include "common.images.image" (dict "imageRoot" .Values.image "global" .Values.global) }}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         securityContext:
           {{- toYaml .Values.securityContext | nindent 12 }}
