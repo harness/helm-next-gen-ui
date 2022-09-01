@@ -3,6 +3,20 @@ entries:
   next-gen-ui:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-09-01T12:45:47.480690961Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 435d66193bbb372533ee39662e67d0cd24901aa18784318df61659efdba73357
+    name: next-gen-ui
+    type: application
+    urls:
+    - https://github.com/harness/helm-next-gen-ui/releases/download/next-gen-ui-0.2.3/next-gen-ui-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-09-01T12:25:16.74093112Z"
     dependencies:
     - name: harness-common
@@ -49,4 +63,4 @@ entries:
     urls:
     - https://github.com/harness/helm-next-gen-ui/releases/download/next-gen-ui-0.2.0/next-gen-ui-0.2.0.tgz
     version: 0.2.0
-generated: "2022-09-01T12:25:16.74094162Z"
+generated: "2022-09-01T12:45:47.480718161Z"
